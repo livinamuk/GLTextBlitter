@@ -62,6 +62,17 @@ void Update() {
     TextBlitter::BlitText(text, "StandardFont", originX, originY, g_viewportWidth, g_viewportHeight, scale);
     TextBlitter::Update();
 }
+
+void Render() {
+    glUseProgram(g_shader);
+    OpenGLFontMesh* fontMesh = TextBlitter::GetGLFontMesh("StandardFont");
+    if (fontMesh) {
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, g_fontTexture);
+        glBindVertexArray(fontMesh->GetVAO());
+        glDrawElements(GL_TRIANGLES, fontMesh->GetIndexCount(), GL_UNSIGNED_INT, 0);
+    }
+}
 ```
 
 The color can be changed using the tag format `[COL=1,0,0]` for red, `[COL=0.5,0.5,0.5]` for grey, etc. See above.
