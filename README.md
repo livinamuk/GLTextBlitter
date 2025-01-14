@@ -1,6 +1,7 @@
 ﻿# OpenGL Text Blitter
 
-![Image1](Image1.png)
+<img src="Image1.png" alt="Description" width="876" style="border:0px solid #000;">
+
 
 Font sprite sheet packer/unpacker and text blitter implemented in OpenGL. Got it out the mud in both Debug/Release.
 
@@ -14,7 +15,7 @@ This program reads in a folder of character images
 
 and packs them into a sprite sheet
 
-![Image3](Image3.png)
+<img src="Image3.png" alt="Description" width="461" style="border:0px solid #000;">
 
 and produces a json file of character width/heights
 
@@ -32,12 +33,12 @@ and produces a json file of character width/heights
     { "width": 9, "height": 12, "offsetX": 24, "offsetY": 0 },
     { "width": 11, "height": 12, "offsetX": 33, "offsetY": 0 },
     { "width": 11, "height": 13, "offsetX": 44, "offsetY": 0 },
-    etc
+    //etc
 ```
 
 The image names can be anything, but they're alphabetically sorted into the sprite sheet. 
 
-####Example usage####
+#### Example usage ####
 
 ```cpp
 // Export

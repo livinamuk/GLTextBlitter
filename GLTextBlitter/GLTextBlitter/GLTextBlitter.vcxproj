@@ -41,7 +41,6 @@
     <ClInclude Include="src\TextBlitting\TextBlitter.h" />
     <ClInclude Include="vendor\stb_image\stb_image.h" />
     <ClInclude Include="vendor\stb_image\stb_image_write.h" />
-    <ClInclude Include="vendor\stb_image\stb_rect_pack.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
