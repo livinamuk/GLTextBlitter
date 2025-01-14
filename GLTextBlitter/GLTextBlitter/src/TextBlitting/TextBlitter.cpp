@@ -102,7 +102,6 @@ namespace TextBlitter {
                     float u1 = (charData.offsetX + charData.width - halfPixelU) * invTextureWidth;
                     float v1 = (charData.offsetY + halfPixelV) * invTextureHeight;
 
-
                     // Normalized quad position
                     float x0 = (cursorX / viewportWidth) * 2.0f - 1.0f;
                     float y0 = (cursorY / viewportHeight) * 2.0f - 1.0f;
