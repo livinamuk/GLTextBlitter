@@ -1,6 +1,6 @@
 ﻿# OpenGL Text Blitter
 
-<img src="Image1.png" alt="Description" width="876" style="border:0px solid #000;">
+![Image1](Image1.png)
 
 
 Font sprite sheet packer/unpacker and text blitter implemented in OpenGL. Got it out the mud in both Debug/Release.
@@ -15,7 +15,7 @@ This program reads in a folder of character images
 
 and packs them into a sprite sheet
 
-<img src="Image3.png" alt="Description" width="461" style="border:0px solid #000;">
+![Image2](Image3.png)
 
 and produces a json file of character width/heights
 
