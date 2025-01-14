@@ -6,7 +6,7 @@
 Font sprite sheet packer/unpacker and text blitter implemented in OpenGL. Got it out the mud in both Debug/Release.
 
 ```
-git clone https://github.com/livinamuk/GLText Blitter.git
+git clone https://github.com/livinamuk/GLTextBlitter.git
 ```
 
 This program reads in a folder of character images
