@@ -64,6 +64,8 @@ void Update() {
 }
 ```
 
-Pass a string of text to `TextBlitter::BlitText()` and set the color can be changed with `[COL=1,0,0]` for red, `[COL=0/5,0.5,0.5]` for grey, etc. See TextBlitter.cpp for the mesh generation and main.cpp for rendering
+The color can be changed using the tag format `[COL=1,0,0]` for red, `[COL=0/5,0.5,0.5]` for grey, etc. See above.
+
+See TextBlitter.cpp for the mesh generation and main.cpp for rendering
 
 Never quit, never waver 🌹
