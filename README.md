@@ -41,18 +41,29 @@ The image names can be anything, but they're alphabetically sorted into the spri
 #### Example usage ####
 
 ```cpp
-// Export
-std::string name = "StandardFont";
-std::string characters = R"(!"#$%&'*+,-./0123456789:;<=>?_ABCDEFGHIJKLMNOPQRSTUVWXYZ\^_`abcdefghijklmnopqrstuvwxyz )";
-std::string textureSourcePath = "res/fonts/raw_images/standard_font/";
-std::string outputPath = "res/fonts/";
-FontSpriteSheetPacker::Export(name, characters, textureSourcePath, outputPath);
+void Init() {
+    // Export
+    std::string name = "StandardFont";
+    std::string characters = R"(!"#$%&'*+,-./0123456789:;<=>?_ABCDEFGHIJKLMNOPQRSTUVWXYZ\^_`abcdefghijklmnopqrstuvwxyz )";
+    std::string textureSourcePath = "res/fonts/raw_images/standard_font/";
+    std::string outputPath = "res/fonts/";
+    FontSpriteSheetPacker::Export(name, characters, textureSourcePath, outputPath);
 
-// Import
-FontSpriteSheet standardFont = FontSpriteSheetPacker::Import("res/fonts/StandardFont.json");
-AddFont(standardFont);
+    // Import
+    FontSpriteSheet standardFont = FontSpriteSheetPacker::Import("res/fonts/StandardFont.json");
+    AddFont(standardFont);
+}
+
+void Update() {
+    int originX = 42;
+    int originY = 42;
+    float scale = 3.5f;
+    std::string text = "Sirens blaring at us,\nbut he only sped up,\nmight leave in a [COL=0.9,0.1,0.1]bodybag[COL=1,1,1], \nnever in [COL=0,0.9,0]cuffs[COL=1,1,1].";
+    TextBlitter::BlitText(text, "StandardFont", originX, originY, g_viewportWidth, g_viewportHeight, scale);
+    TextBlitter::Update();
+}
 ```
 
-See TextBlitter.cpp for the mesh generation and main.cpp for rendering
+Pass a string of text to `TextBlitter::BlitText()` and set the color can be changed with `[COL=1,0,0]` for red, `[COL=0/5,0.5,0.5]` for grey, etc. See TextBlitter.cpp for the mesh generation and main.cpp for rendering
 
 Never quit, never waver 🌹
