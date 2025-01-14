@@ -33,7 +33,7 @@ and produces a json file of character width/heights
     { "width": 9, "height": 12, "offsetX": 24, "offsetY": 0 },
     { "width": 11, "height": 12, "offsetX": 33, "offsetY": 0 },
     { "width": 11, "height": 13, "offsetX": 44, "offsetY": 0 },
-    //etc
+    etc
 ```
 
 The image names can be anything, but they're alphabetically sorted into the sprite sheet. 
