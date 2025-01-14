@@ -42,7 +42,7 @@ void Init() {
     glfwMakeContextCurrent(g_window);
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 
-    // Init text blitter (packs font sprite sheet and imports it)
+    // Init text blitter (Exports packed sprite sheet and imports it)
     TextBlitter::Init();
 
     // Init resources
@@ -64,6 +64,7 @@ void Update() {
 void Render() {
     glfwGetWindowSize(g_window, &g_viewportWidth, &g_viewportHeight);
     glViewport(0, 0, g_viewportWidth, g_viewportHeight);
+    glDisable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glUseProgram(g_shader);
@@ -72,7 +73,6 @@ void Render() {
     glBindVertexArray(g_backgroundQuadVAO);
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, g_backgroundTexture);
-    glDisable(GL_DEPTH_TEST);
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
     // Render text
